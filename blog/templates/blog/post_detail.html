@@ -1,0 +1,42 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<head>
+	<title>{{post.title}}</title>
+	<link rel="stylesheet icon" type="image/x-icon" href="{% static 'assets/favicon.ico' %}"/>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/style_post_detail.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="jumbotron">
+			<div class="title">
+				<p>{{post.title}}</p>
+			</div>
+			<div class="author">
+				<p>@{{post.author}}</p>
+			</div>	
+		</div>
+		<div class="text">
+			<p>{{post.text}}</p>
+		</div>
+	</div>
+	<div class="date">
+		<p>{{post.published_date}}</p>
+	</div>
+<!-- 
+	<div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="post">
+                <div class="date">
+                    <p>published: {{ post.published_date }}</p>
+                </div>
+                   	<h1><a href="">{{ post.title }}</a></h1>
+                    <p>{{ post.text|linebreaks }}</p>
+            </div>
+        </div>
+    </div>
+</div> -->
+</body>
